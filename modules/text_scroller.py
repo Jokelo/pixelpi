@@ -83,7 +83,8 @@ class TextScroller(Module):
         visible_letters = self.get_visible_letters()
         for l in visible_letters:
             self.draw_letter(l[0], Point(l[1], y_position), color)
-
+    time.sleep(0.15)	#The Speed at which the text scrolls 	
+    
     def get_visible_letters(self):
         """
 
