@@ -9,7 +9,7 @@ screen = create_screen()
 
 text="Hello world, you are... sometimes cruel!"
 
-scroller = TextScroller(screen, string.printable)
+scroller = TextScroller(screen, text,"3x7_font_printable.bmp")
 scroller.start()
 
 while True:
