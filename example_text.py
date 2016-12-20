@@ -7,7 +7,7 @@ import string
 
 screen = create_screen()
 
-text="Hello world, you are... sometimes cruel!"
+text="Hello wop!"
 
 scroller = TextScroller(screen, text,"3x7_font_printable.bmp")
 scroller.start()
