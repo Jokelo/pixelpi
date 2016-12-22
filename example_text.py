@@ -7,12 +7,14 @@ import string
 
 screen = create_screen()
 
-text="Hello wop!"
+text="Hello World!"
 
 scroller = TextScroller(screen, text,"3x7_font_printable.bmp")
 scroller.start()
+print("Displaying Text")
+TextScroller.loop = 0
 
-while True:
+while TextScroller.loop!= 1:
 	if config.virtual_hardware:
 		pygame.time.wait(10)
 		for event in pygame.event.get():
