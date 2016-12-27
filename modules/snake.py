@@ -1,5 +1,5 @@
 import collections
-import random
+import random as rdm
 import time
 import os
 import math
@@ -10,7 +10,7 @@ import input
 def random_color():
 	color = []
 	while not 0 in color or not 255 in color:
-		color = [random.choice([0, 255]) for i in range(3)]
+		color = [rdm.choice([0, 255]) for i in range(3)]
 	return Color(color[0], color[1], color[2])
 
 class Snake(Module):
@@ -71,7 +71,7 @@ class Snake(Module):
 	def set_food(self):
 		self.food = self.snake[0]
 		while self.food in self.snake:
-			self.food = Point(random.randint(0, self.screen.width - 1), random.randint(0, self.screen.height - 1))
+			self.food = Point(rdm.randint(0, self.screen.width - 1), rdm.randint(0, self.screen.height - 1))
 		self.pulse_offset = time.clock()
 			
 	def move(self):
