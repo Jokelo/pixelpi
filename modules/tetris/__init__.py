@@ -1,11 +1,11 @@
 import collections
-import random
 import time
 import pygame
 import os
 import thread
 import math
 import input
+import random as rdm
 
 from thread import start_new_thread
 from modules.animation import *
@@ -94,7 +94,7 @@ class Tetris(Module):
 			self.screen.update()
 		
 	def pick_tetromino(self):
-		self.current_tetromino = random.choice(self.tetrominos).rotate(random.randint(0, 3))
+		self.current_tetromino = rdm.choice(self.tetrominos).rotate(rdm.randint(0, 3))
 		self.tetromino_pos = Point(self.level_width / 2 - self.current_tetromino.width / 2, 0)
 	
 	def put_tetromino(self):
@@ -143,7 +143,7 @@ class Tetris(Module):
 				if len(blocks) == 0:
 					line -= 1
 					continue
-				block = random.choice(blocks)
+				block = rdm.choice(blocks)
 				particle = Particle(x = block, y = line, color = self.level[block][line])
 				self.level[block][line] = None
 				particles.append(particle)
