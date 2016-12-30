@@ -60,7 +60,7 @@ Power is running through copper pins tying two strips together on the front and 
 ## Software
 
 To set up the software, clone this repository on your Raspberry Pi. Rename the file `config.ini.example` to `config.ini`.
-Make sure, the neopixel, pillow(PIL), noise (for fire module. sudo pip install noise), and Pygame libraries are installed.
+Make sure, the neopixel, pillow(PIL)(sudo apt-get install python-PIL), noise (for fire module. sudo pip install noise), and Pygame libraries are installed.
 This project uses Python 2.7.
 
 ### Animations
